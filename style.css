@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    background-color: rgb(252, 251, 250);
+}
+.container{
+    width:30%;
+    margin:100px auto;
+    padding:30px;
+    background-color: beige;
+    font-size:larger;
+    font-family: 'Roboto', sans-serif;
+    z-index: 100;
+    font-weight: 700;
+    
+}
+.heading{
+    font-size: 30px;
+
+  border-bottom: 1px solid black;
+
+    
+}
+
+.container {
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.button{
+
+    margin: auto;
+    background-color: rgb(69, 69, 150);
+    color:white;
+    border-radius: 5px;
+    display: block;
+    margin-top: 15px;
+}
+.div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+}
+.companyName{
+    display: block;
+    
+    
+}
+.companyText{
+    margin:5px 0px;
+    padding:5px ;
+    border-radius: 5px;
+
+}

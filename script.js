@@ -1,137 +1,144 @@
-let data= {
-  "fields": [
+let data = {
+  fields: [
     {
-      "displayName": "Contract Type",
-      "order": 5,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "dropdown",
-      "values": [
+      displayName: 'Contract Type',
+      order: 5,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'dropdown',
+      values: [
         {
-          "id": 0,
-          "value": "None"
+          id: 0,
+          value: 'None',
         },
         {
-          "id": 1,
-          "value": "Service Agreements"
+          id: 1,
+          value: 'Service Agreements',
         },
         {
-          "id": 2,
-          "value": "Advisory"
+          id: 2,
+          value: 'Advisory',
         },
         {
-          "id": 3,
-          "value": "CDA"
+          id: 3,
+          value: 'CDA',
         },
         {
-          "id": 4,
-          "value": "Endorsement"
+          id: 4,
+          value: 'Endorsement',
         },
         {
-          "id": 5,
-          "value": "Quality"
+          id: 5,
+          value: 'Quality',
         },
         {
-          "id": 6,
-          "value": "Consultancy"
+          id: 6,
+          value: 'Consultancy',
         },
         {
-          "id": 7,
-          "value": "Lease"
+          id: 7,
+          value: 'Lease',
         },
         {
-          "id": 8,
-          "value": "Sales & Distribution"
+          id: 8,
+          value: 'Sales & Distribution',
         },
         {
-          "id": 9,
-          "value": "Others"
-        }
-      ]
+          id: 9,
+          value: 'Others',
+        },
+      ],
     },
     {
-      "displayName": "Company Name",
-      "order": 1,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "companyText",
-      "required": true
+      displayName: 'Company Name',
+      order: 1,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'text',
+      required: true,
     },
     {
-      "displayName": "Unit or Vertical",
-      "order": 2,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "companyText",
-      "required": true
+      displayName: 'Unit or Vertical',
+      order: 2,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'text',
+      required: true,
     },
     {
-      "displayName": "Phone Number",
-      "order": 4,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "number",
-      "required": true
+      displayName: 'Phone Number',
+      order: 4,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'number',
+      required: true,
     },
     {
-      "displayName": "Email Address",
-      "order": 3,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "companyText",
-      "required": true
+      displayName: 'Email Address',
+      order: 3,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'text',
+      required: true,
     },
     {
-      "displayName": "Contract Document",
-      "order": 7,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "document",
-      "required": true
+      displayName: 'Contract Document',
+      order: 7,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'document',
+      required: true,
     },
     {
-      "displayName": "Type of Document",
-      "order": 6,
-      "tooltip": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-      "type": "dropdown",
-      "values": [
+      displayName: 'Type of Document',
+      order: 6,
+      tooltip:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      type: 'dropdown',
+      values: [
         {
-          "id": 0,
-          "value": "None"
+          id: 0,
+          value: 'None',
         },
         {
-          "id": 1,
-          "value": "Service Agreements"
+          id: 1,
+          value: 'Service Agreements',
         },
         {
-          "id": 2,
-          "value": "Advisory"
+          id: 2,
+          value: 'Advisory',
         },
         {
-          "id": 3,
-          "value": "CDA"
+          id: 3,
+          value: 'CDA',
         },
         {
-          "id": 4,
-          "value": "Endorsement"
+          id: 4,
+          value: 'Endorsement',
         },
         {
-          "id": 5,
-          "value": "Quality"
+          id: 5,
+          value: 'Quality',
         },
         {
-          "id": 6,
-          "value": "Consultancy"
+          id: 6,
+          value: 'Consultancy',
         },
         {
-          "id": 7,
-          "value": "Lease"
+          id: 7,
+          value: 'Lease',
         },
         {
-          "id": 8,
-          "value": "Sales & Distribution"
+          id: 8,
+          value: 'Sales & Distribution',
         },
         {
-          "id": 9,
-          "value": "Others"
-        }
-      ]
-    }
-  ]
+          id: 9,
+          value: 'Others',
+        },
+      ],
+    },
+  ],
 }
 
 const container = document.querySelector(".container");
@@ -145,13 +152,20 @@ for (let i = 0; i < p.length; i++)
 {
   const div = document.createElement('div')
   div.classList = "div";
-  const companyName = document.createElement('label');
-  companyName.innerText = p[i].displayName;
+  const companyName = document.createElement('div');
+  if (p[i].required == undefined) {
+    companyName.innerText = p[i].displayName
+  } else {
+    console.log(p[i].required)
+    companyName.innerText = `${p[i].displayName}${
+      p[i].required == false ? null : " *"
+    }`
+  }
   companyName.className = "companyName";
-  div.appendChild(companyName)
+  div.appendChild(companyName);
 
   
-  if (p[i].type == "dropdown") {
+  if (p[i].type == 'dropdown') {
     const contractText = document.createElement('select')
     contractText.className = 'companyText'
     const contractOtions = p[4].values.map((ele, index) => {
@@ -160,28 +174,60 @@ for (let i = 0; i < p.length; i++)
       createOption.id = index
       contractText.appendChild(createOption)
     })
-    div.appendChild(contractText);
+    div.appendChild(contractText)
   }
-  else if (p[i].type == "document")
-  {
+  
+  else if (p[i].type == 'document') {
     const companyText = document.createElement('input')
     companyText.placeholder = `Enter ${p[i].displayName} `
-    companyText.type = "file";
+    companyText.type = 'file'
     companyText.className = 'companyText'
     div.appendChild(companyText);
-    }
-  else {
+    companyText.required = p[i].required;
+
+
+  }
+  else if ((p[i].type == 'number')) {
     const companyText = document.createElement('input')
     companyText.placeholder = `Enter ${p[i].displayName} `
-    companyText.type = p[i].type;
+    companyText.type = p[i].type
+    companyText.className = 'companyText'
+    companyText.required = p[i].required;
+    companyText.id = "mobileNumber";
+
+    div.appendChild(companyText)
+   const tooltiptext = document.createElement('span')
+    tooltiptext.innerText = p[i].tooltip;
+   tooltiptext.className = 'tooltiptext'
+   div.appendChild(tooltiptext)
+  
+  }
+  else if (p[i].type == 'text') {
+    const companyText = document.createElement('input')
+    companyText.placeholder = `Enter ${p[i].displayName} `
+    companyText.type = 'text';
     companyText.className = 'companyText';
-    if (p[i].displayName == "Email Address")
-    {
-      console.log(p[i].displayName == 'Email Address')
-      companyText.id = "email";
-      }
+     if (p[i].displayName == 'Email Address') {
+       companyText.id = 'requiredEmail'
+       companyText.required = p[i].required;
+    }
+    if (p[i].displayName == 'Company Name') {
+      companyText.id = 'requiredCompanyName';
+      companyText.required = p[i].required;
+    }
+    if (p[i].displayName == 'Unit or Vertical') {
+      companyText.id = 'requiredUnit';
+      companyText.required = p[i].required;
+    }
+   
+    div.appendChild(companyText)
+       const tooltiptext = document.createElement('span')
+       tooltiptext.innerText = p[i].tooltip
+       tooltiptext.className = 'tooltiptext'
+       div.appendChild(tooltiptext)
+  
+     
     
-     div.appendChild(companyText)
   }
  
   
@@ -190,7 +236,7 @@ for (let i = 0; i < p.length; i++)
 }
 
 const button = document.createElement("button");
-button.innerText = "submit"
+button.innerText = "Submit"
 // button.type = "submit";
 button.className = "button";
 form.appendChild(button);
@@ -199,12 +245,35 @@ container.appendChild(form)
 
 // ---------------------------------------------
 
+function ValidateEmail(mail) {
+  if (/^[A-Za-z0-9+_.-]+@(.+)$/.test(mail)) {
+    return true
+  } else {
+    alert('You have entered an invalid email address!')
+    return false
+  }
+}
+function validationMobile(mobile) {
+  console.log(mobile);
+  if (/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/.test(mobile)) {
+
+    return true;
+  }
+  alert('You have entered an invalid mobile number!')
+  return false
+}
 
 
-
-const submit = document.querySelector("button");
+const submit = document.querySelector(".button");
 console.log(submit);
-button.addEventListener(onclick, console.log("clicked"));
+button.addEventListener("click", validation = (event) => {
+  console.log("clicked");
+  // event.preventDefault();
+  const mail = document.querySelector('#requiredEmail')
+  ValidateEmail(mail.value);
+  const mobileNum = document.querySelector("#mobileNumber");
+  validationMobile(mobileNum.value);
+});
 
 
 

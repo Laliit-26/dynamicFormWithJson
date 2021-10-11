@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body{
-    background-color: rgb(252, 251, 250);
+    background-color: #004173;
+    color: white;
 }
 .container{
     width:30%;
     margin:100px auto;
     padding:30px;
-    background-color: beige;
-    font-size:larger;
+    background-color: rgb(218, 211, 211);
+    
+    font-size:1rem;
     font-family: 'Roboto', sans-serif;
     z-index: 100;
-    font-weight: 700;
+    font-weight: 500;
     
 }
 .heading{
@@ -40,12 +42,17 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 5px;
     display: block;
     margin-top: 15px;
+    width:150px;
+    padding: 5px;
+    font-size: 1.2rem;
 }
 .div{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
+    align-items: center;
     
 }
 .companyName{
@@ -59,3 +66,51 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 5px;
 
 }
+
+
+
+.div .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 6px;
+margin:0px 450px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+.div:hover .tooltiptext {
+  visibility: visible;
+  
+}
+
+  input,select  
+{
+   background-color: #002842;
+   border:1px solid white;
+   color: white;
+}
+input:hover{
+    background-color:white;
+    color: black;
+}
+@media only screen and (max-width:1000px) {
+    .container{
+        width: 80%;
+        font-size:.7rem;
+    }
+  input,select  
+{
+    font-size:.7rem;
+}
+
+  }
+
+  .required{
+     color: red;
+     justify-self: flex-start;
+
+  }

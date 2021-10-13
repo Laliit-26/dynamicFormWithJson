@@ -182,6 +182,7 @@ for (let i = 0; i < p.length; i++)
     companyText.placeholder = `Enter ${p[i].displayName} `
     companyText.type = 'file'
     companyText.className = 'companyText'
+    companyText.id = 'docs'
     div.appendChild(companyText);
     companyText.required = p[i].required;
 
@@ -262,20 +263,35 @@ function validationMobile(mobile) {
   alert('You have entered an invalid mobile number!')
   return false
 }
+console.log(document.querySelector('form'))   
 
-
-const submit = document.querySelector(".button");
+ const submit = document.querySelector(".button");
 console.log(submit);
 button.addEventListener("click", validation = (event) => {
   console.log("clicked");
-  // event.preventDefault();
-  const mail = document.querySelector('#requiredEmail')
-  ValidateEmail(mail.value);
-  const mobileNum = document.querySelector("#mobileNumber");
-  validationMobile(mobileNum.value);
+  event.preventDefault();
+  
+  let companyName;
+  let requiredUnit;
+  let docs;
+  for (let i = 0; i < p.length; i++) {
+    companyName = document.querySelector('#requiredCompanyName').value.length != 0
+    requiredUnit = document.querySelector('#requiredUnit').value.length != 0
+      docs = document.querySelector('#docs').value != 0
+  }
+  console.log(companyName);
+  const mail = ValidateEmail(document.querySelector('#requiredEmail').value);
+  const mobileNum = validationMobile(document.querySelector("#mobileNumber").value);
+  console.log(mail);
+  if (companyName && requiredUnit && docs && mail && mobileNum) {
+    document.querySelector('.container').style.display = 'none'
+    document.querySelector('.submitted').style.display = 'block'
+  }
+  else {
+    alert("please fill all the required fields");
+ }
+
 });
-
-
 
 
 

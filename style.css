@@ -6,8 +6,8 @@ body{
 }
 .container{
     width:30%;
-    margin:100px auto;
-    padding:30px;
+    margin:50px auto;
+    padding:30px 10px;
     background-color: rgb(218, 211, 211);
     
     font-size:1rem;
@@ -17,10 +17,12 @@ body{
     
 }
 .heading{
-    font-size: 30px;
-
-  border-bottom: 1px solid black;
-
+    font-size: 3rem;
+   text-align: center;
+   margin-top:30px;
+  /* text-decoration: underline; */
+ /* text-decoration-style:dashed;
+ text-decoration-color: #fff; */
     
 }
 
@@ -57,7 +59,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .companyName{
     display: block;
-    
+    margin-right:10px;
     
 }
 .companyText{
@@ -97,13 +99,22 @@ input:hover{
     background-color:white;
     color: black;
 }
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1080px) {
     .container{
-        width: 80%;
+        width: 60%;
         font-size:.7rem;
+        
+    }
+    .tooltiptext{
+        display: none;
+
+    }
+    .companyText{
+       font-size: .5rem;
     }
   input,select  
 {
+    width:40%;
     font-size:.7rem;
 }
 
@@ -114,3 +125,12 @@ input:hover{
      justify-self: flex-start;
 
   }
+  .submitted{
+    margin-top: 100px;
+      display: none;
+      font-size: 40px;
+   text-align: center;
+   
+  }
+
+ 
